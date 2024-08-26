@@ -29,25 +29,46 @@
     ></script>
 
     <style>
-      .fondo_uno {
-        width: 10%;
-        height: 50%;
+      .fondoDegrado {
+        background: linear-gradient(
+          90deg,
+          rgba(18, 22, 14, 0.8) 50%,
+          rgba(0, 0, 0, 1) 100%
+        );
       }
 
-      #wrap-text {
+      .navbarTitulo {
+        position: absolute;
+        top: 0;
+        width: -moz-available;
+      }
+
+      #wrapText {
         width: 80%;
       }
 
-      .wrap-text.strong,
-      .wrap-text.h1 {
+      .wrapText.strong,
+      .wrapText.h1 {
         word-wrap: normal;
       }
 
       .noAlTope {
         position: absolute;
-        top: 20%;
-        padding-left: 3%;
+        top: 30%;
+        padding-left: 5%;
         padding-right: 3%;
+      }
+
+      .contenido {
+        padding-left: 8%;
+        padding-top: 4%;
+        padding-bottom: 4%;
+      }
+
+      .resaltado:hover {
+        width: 55px;
+        height: 55px;
+        cursor: pointer;
       }
 
       #large {
@@ -58,19 +79,23 @@
         font-size: 90px;
       }
 
-      #fondo_dos {
-        background-color: #1f1f1c;
-      }
-
-      .overlay-text {
+      .overlayText {
         position: absolute;
         left: 11%;
-        top: 236%;
+        top: 183%;
         font-size: 30px;
         text-align: center;
       }
 
-      hr {
+      .overlayText-2 {
+        position: absolute;
+        left: 63%;
+        top: 456%;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .hrSeguro {
         height: 4px;
         color: white;
         background-color: white;
@@ -86,8 +111,9 @@
         width: 80%;
       }
 
-      .textoAmarillo {
-        color: #d7fa00;
+      .textoAmarillo,
+      a:hover {
+        color: #d7fa00 !important;
       }
 
       .separacionImagen {
@@ -101,80 +127,171 @@
         margin-left: 10%;
         border-color: white;
         box-shadow: 15px -10px 30px 1px;
+        border-radius: 20px;
+      }
+
+      .inputForm {
+        transform: skew(-20deg);
+        border-style: solid;
+        background: #efefef;
+        border-color: #efefef;
+        border-radius: 10px;
+        height: 60%;
       }
 
       #derecho {
         padding: 5px 10px;
         transform: skew(20deg) !important;
       }
+
+      .hidden {
+        display: none;
+      }
+      .visible {
+        display: block;
+      }
+
+      .inner {
+        border-radius: 50px;
+        border: 2px solid white;
+      }
+
+      .inner-yelow {
+        border-radius: 50px;
+        border: 1px solid greenyellow;
+      }
+
+      #conEspacio {
+        padding-left: 3%;
+        font-size: 50px;
+      }
+      .mensajes {
+        background-color: #1d1f1c;
+        border-radius: 50px;
+      }
+
+      .formulario {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        background: #3f423e;
+      }
+      .contenedor {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      .descripcion {
+        background: linear-gradient(
+          90deg,
+          rgba(179, 255, 0, 1) 0%,
+          rgba(255, 255, 12, 1) 70%
+        );
+      }
+
+      .hrDescripcion {
+        border: 1px solid black;
+        margin: auto !important;
+        width: 95%;
+      }
+
+      .fondoInvertir {
+        position: absolute;
+        top: 390%;
+        padding-left: 5%;
+      }
+
+      .fondoSeccion {
+        position: absolute;
+        top: 350%;
+        left: 50%;
+        padding-left: 5%;
+      }
+
+      .fondoReja {
+        position: absolute;
+        top: 70%;
+        left: 47%;
+      }
     </style>
   </head>
   <body>
     <div>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <i class="fas fa-bars" style="color: #d7fa00; font-size: 50px"></i>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="inicio"
-                  >Inicio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="seguridad">Seguridad</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sectores">Sectores</a>
-              </li>
-
-              <img
-                src="./Imagenes/logoAmarillo.png"
-                class="rounded float-start"
-                alt="..."
-                width="170"
-                height="80"
-              />
-            </ul>
-          </div>
-        </div>
-      </nav>
-
       <div>
-        <div class="fondo_uno">
+        <div class="fondoInicio">
           <img src="./Imagenes/BG_INICIO.webp" class="" alt="..." />
         </div>
 
-        <div class="noAlTope mt-4 mb-4 text-white">
+        <div class="p-4 row fondoDegrado navbarTitulo">
+          <div class="col-6">
+            <div class="row align-items-end">
+              <div class="col-3">
+                <i
+                  class="fas fa-bars"
+                  style="color: #d7fa00; font-size: 70px"
+                ></i>
+              </div>
+              <div class="col-3">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="#inicio"
+                >
+                  <strong>INICIO</strong>
+                </a>
+              </div>
+              <div class="col-3">
+                <a class="nav-link text-white" href="#seguridad">
+                  <strong>SEGURIDAD</strong>
+                </a>
+              </div>
+              <div class="col-3">
+                <a class="nav-link text-white" href="#sectores">
+                  <strong>SECTORES</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <img
+              src="./Imagenes/logo.webp"
+              class="float-start"
+              alt="..."
+              width="170"
+              height="80"
+            />
+          </div>
+        </div>
+
+        <div id="inicio" class="noAlTope mt-4 text-white">
           <div>
             <h1 id="xlarge">Conoce Fold Inverstock</h1>
             <h1>¿Tienes preguntas?</h1>
-            <h2>
-              <div id="wrap-text">
-                <strong>
-                  Haz clic en el video y descubre como puede hacer crecer tu
-                  dinero con inversiones inteligentes.
-                </strong>
-              </div>
+            <h2 id="wrapText">
+              <strong>
+                Haz clic en el video y descubre cómo puede hacer crecer tu
+                dinero con inversiones inteligentes.
+              </strong>
             </h2>
-            <p>
-              <img
-                src="./Imagenes/video.png"
-                alt="..."
-                width="1250"
-                height="500"
-              />
-            </p>
+            <img
+              src="./Imagenes/video.png"
+              alt="..."
+              width="1250"
+              height="500"
+            />
           </div>
         </div>
       </div>
 
+      <!-- <div class="fondoReja">
+        <img src="./Imagenes/patron.png" class="" alt="..." height="900" />
+      </div> -->
+
       <div>
-        <div id="fondo_dos" class="row">
-          <div id="wrap-text" class="col">
-            <p id="large" class="text-white m-4 ps-5">
-              Contactanos para obtener asesoria personalizada.
+        <div class="row" style="background-color: #1f1f1c">
+          <div id="wrapText mt-4" class="col">
+            <p id="large" class="text-white m-5">
+              Contáctanos para obtener asesoría personalizada.
             </p>
 
             <div>
@@ -184,7 +301,7 @@
                 width="700"
                 height="250"
               />
-              <div class="overlay-text">¡MAS INFORMACION!</div>
+              <div class="overlayText">¡MÁS INFORMACIÓN!</div>
             </div>
           </div>
 
@@ -200,10 +317,10 @@
         </div>
       </div>
 
-      <div class="bg-black">
+      <div id="seguridad" class="bg-black pb-5">
         <div class="pt-5 text-center">
           <p id="large" class="text-white">Seguridad</p>
-          <hr class="pl-1 pr-1" />
+          <hr class="hrSeguro" />
         </div>
 
         <div class="row">
@@ -227,7 +344,7 @@
                   height="100"
                 />
                 <hr class="separacion" />
-                <h2 class="textoAmarillo">Asesoria Personalizada</h2>
+                <h2 class="textoAmarillo">Asesoría Personalizada</h2>
               </div>
               <div class="col-6 text-center">
                 <img
@@ -239,7 +356,7 @@
                 />
                 <hr class="separacion" />
                 <h2 class="textoAmarillo">
-                  Plataforma de inversion facil de usar
+                  Plataforma de inversión fácil de usar
                 </h2>
               </div>
             </div>
@@ -256,7 +373,7 @@
                 />
                 <hr class="separacion" />
                 <h2 class="textoAmarillo">
-                  Acceso a informacion y analisis exclusivos
+                  Acceso a información y análisis exclusivos
                 </h2>
               </div>
               <div class="col-6 text-center">
@@ -286,7 +403,7 @@
                 />
                 <hr class="separacion" />
                 <h2 class="textoAmarillo">
-                  Comienza a generar ingresos rapidamente
+                  Comienza a generar ingresos rápidamente
                 </h2>
               </div>
             </div>
@@ -295,11 +412,302 @@
 
         <div class="mt-4 footerSecure text-center">
           <h1 id="derecho" class="text-white">
-            ¡Comienza hoy y aprovecha esta oportunidad unica para maximizar tus
+            ¡Comienza hoy y aprovecha esta oportunidad única para maximizar tus
             ganacias!
           </h1>
         </div>
       </div>
+
+      <div class="fondoInvertir">
+        <img src="./Imagenes/FOTO2.webp" class="" alt="..." height="700" />
+      </div>
+
+      <div id="sectores" class="bg-white">
+        <div class="fondoSeccion">
+          <img src="./Imagenes/SHAPE.webp" class="" alt="..." height="550" />
+        </div>
+
+        <div class="row contenido">
+          <div class="col-6">
+            <h1 class="text-secondary" style="font-size: 60px">
+              <strong>Sectores</strong>
+            </h1>
+
+            <h1>Somos expertos en inversiones de los sectores:</h1>
+          </div>
+
+          <div id="img-1">
+            <img
+              src="./Imagenes/3D_1.webp"
+              alt="..."
+              width="500"
+              height="500"
+              style="position: relative"
+            />
+
+            <h1 class="text-secondary">Activos en materias primas</h1>
+            <h4>
+              Comprende la inversión en productos básicos como
+              <strong>
+                oro, plata, petróleo, gas natural y productos agrícolas
+              </strong>
+            </h4>
+          </div>
+
+          <div id="img-2">
+            <img
+              src="./Imagenes/3D_2.webp"
+              alt="..."
+              width="500"
+              height="500"
+              style="position: relative"
+            />
+
+            <h1 class="text-secondary">Criptomonedas</h1>
+            <h4>
+              Alto potencial de crecimiento y alta volatilidad en inversiones de
+              monedas digitales como
+              <strong> Bitcoin, Ethereum </strong>
+              y altcoins
+            </h4>
+          </div>
+
+          <div id="img-3">
+            <img
+              src="./Imagenes/3D_3.webp"
+              alt="..."
+              width="500"
+              height="500"
+              style="position: relative"
+            />
+
+            <h1 class="text-secondary">Divisas</h1>
+            <h4>
+              Aprovechar las fluctuaciones en los
+              <strong> tipos de cambio entre diferentes monedas, </strong>
+              y obten ganancias a corto y largo plazo.
+            </h4>
+          </div>
+
+          <div id="img-4">
+            <img
+              src="./Imagenes/3D_4.webp"
+              alt="..."
+              width="500"
+              height="500"
+              style="position: relative"
+            />
+
+            <h1 class="text-secondary">Indices Bursatiles</h1>
+            <h4>
+              Invierte en conglemerados de empresasa, donde
+              <strong>
+                podrás diversificar tus inversiones en sus portafolios
+              </strong>
+            </h4>
+          </div>
+
+          <div class="col-1 text-center" onclick="siguiente()">
+            <img
+              src="./Imagenes/ICON-FLECHA.webp"
+              alt="..."
+              width="50"
+              height="50"
+              class="resaltado"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-4" style="background-color: #06070d">
+        <div class="contenedor">
+          <br />
+
+          <div class="m-5 inner">
+            <div class="row">
+              <div class="col-6"></div>
+              <div class="col-6">
+                <img
+                  src="./Imagenes/BOTON2.webp"
+                  alt="..."
+                  width="700"
+                  height="250"
+                />
+                <div class="overlayText-2">QUIERO INVERTIR</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-8">
+                <h1 class="text-white" id="conEspacio">
+                  Empieza tu camino hacia las inversiones de forma exitosa.
+                </h1>
+              </div>
+              <div class="col-4 text-end" style="padding-right: 3%">
+                <img
+                  src="./Imagenes/FLECHA-IR.svg"
+                  alt="..."
+                  width="80"
+                  height="80"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="m-5 row">
+            <div class="col-4 mensajes">
+              <h1 class="text-secondary m-3"><strong> MENSAJES</strong></h1>
+
+              <br />
+              <div class="text-center mt-4 mb-4">
+                <img
+                  src="./Imagenes/whatsapp.png"
+                  alt="..."
+                  width="200"
+                  height="200"
+                />
+              </div>
+              <br />
+
+              <p style="color: #ffff0c; font-size: 50px">
+                <strong>COMUNICATE AQUÍ</strong>
+              </p>
+
+              <div class="text-end mb-4">
+                <img
+                  src="./Imagenes/FLECHA-IR.svg"
+                  alt="..."
+                  width="80"
+                  height="80"
+                />
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="inner-yelow formulario">
+                <div class="row">
+                  <div class="col-9">
+                    <h3><strong>FORMULARIO</strong></h3>
+                    <h3 style="color: #ffff0c">Escríbenos y contáctanos</h3>
+                    <h4 class="text-white">
+                      <strong
+                        >Los campos marcados con * son obligatorios</strong
+                      >
+                    </h4>
+
+                    <div class="row">
+                      <div class="col-6">
+                        <label class="text-secondary" for="primer">
+                          <strong>Nombres</strong>
+                        </label>
+                        <br />
+                        <div class="inputForm text-secondary">
+                          <p id="derecho">Primer nombre*</p>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <label class="text-secondary" for="primer">
+                          <strong>Nacionalidad</strong>
+                        </label>
+                        <br />
+                        <div class="inputForm text-secondary">
+                          <p id="derecho">Nacionalidad*</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label class="text-secondary" for="primer">
+                        <strong>Número de teléfono</strong>
+                      </label>
+                      <br />
+                      <div class="inputForm text-secondary">
+                        <p id="derecho" class="text-danger">
+                          Escribir Número Completo*
+                        </p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label class="text-secondary" for="primer">
+                        <strong>Correo electronico</strong>
+                      </label>
+                      <br />
+                      <div class="inputForm text-secondary">
+                        <p id="derecho">Dirección e-mail*</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3 text-end">
+                    <img
+                      src="./Imagenes/user-gradint-logo.webp"
+                      alt="..."
+                      width="120"
+                      height="120"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <br />
+              <div class="inner-yelow descripcion">
+                <h1 style="padding-left: 5%">Descripción</h1>
+                <hr class="hrDescripcion" />
+
+                <br />
+                <br />
+                <div class="text-end mt-4" style="padding-right: 10px">
+                  <img
+                    src="./Imagenes/SEND.webp"
+                    alt="..."
+                    width="180"
+                    height="60"
+                  />
+                </div>
+
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-black">
+        <div class="text-center">
+          <img
+            src="./Imagenes/logoBlanco.png"
+            alt="..."
+            width="170"
+            height="80"
+            class="mt-4 mb-4"
+          />
+        </div>
+      </div>
     </div>
+
+    <script>
+      esconder();
+
+      let ventana = 1;
+      let imgActual = document.getElementById("img-" + ventana);
+      imgActual.setAttribute("class", "visible col-5 text-center");
+
+      function esconder() {
+        for (let i = 1; i < 5; i++) {
+          let img = document.getElementById("img-" + i);
+          img.setAttribute("class", "hidden col-5 text-center");
+        }
+      }
+
+      function siguiente() {
+        esconder();
+        if (ventana === 4) {
+          ventana = 0;
+        }
+        ventana++;
+
+        let imgActual = document.getElementById("img-" + ventana);
+        imgActual.setAttribute("class", "visible col-5 text-center");
+      }
+    </script>
   </body>
 </html>
